@@ -1,0 +1,73 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <windows.h>
+using namespace std;
+
+int DisplayResourceNAMessageBox()
+{
+    int msgboxID = MessageBox(
+        NULL,
+        (LPCWSTR)L"Resource not available\nDo you want to try again?",
+        (LPCWSTR)L"Account Details",
+        MB_ICONWARNING | MB_CANCELTRYCONTINUE | MB_DEFBUTTON2
+    );
+
+    switch (msgboxID)
+    {
+    case IDCANCEL:
+        exit(-1);
+    case IDTRYAGAIN:
+        DisplayResourceNAMessageBox();
+        break;
+    case IDCONTINUE:
+        break;
+    }
+
+    return msgboxID;
+}
+
+int main()
+{
+    ifstream myReadFile;
+    myReadFile.open("c.txt");
+    char output[100];
+    if (myReadFile.is_open()) {
+        while (!myReadFile.eof())
+        {
+            myReadFile >> output;
+            cout << output<<endl;
+
+
+
+
+
+
+
+        }
+    }
+           myReadFile.close();
+
+
+	string mystring;
+
+	int i = 0;
+	ofstream myfile;
+
+	myfile.open("c.txt", ios::app);
+
+	do {
+
+		cout << " say?" << endl;
+
+		getline(cin, mystring);
+
+		myfile << mystring << endl;
+       // DisplayResourceNAMessageBox();
+	} while (i != 1);
+
+		myfile.close();
+
+	return 0;
+
+}
