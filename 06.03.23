@@ -1,0 +1,183 @@
+#include <iostream> 
+#include <vector>
+using namespace std;
+double sum()
+{
+	double num1, num2;
+	cout << "Ievadi 2 skaitļus" << endl;
+	cin >> num1>> num2;
+	return num1 + num2;
+}
+double quadr()
+{
+	double num1;
+	cout << "Ievadi 1 skaitli" << endl;
+	cin >> num1;
+	return num1*num1;
+}
+void average()
+{
+	vector<double> n{ 1,2,3,4,5 };
+	cout << (n[0] + n[1] + n[2] + n[3] + n[4]) / 5;
+}
+void even()
+{
+	vector<int> n{ 1,2,3,4,5 };
+	int i = 0;
+	do {
+		if (n[i] % 2 == 0)
+			cout << n[i] << "";
+		i++;
+	} while (i < n.size());
+}
+void prime()
+{
+	vector<int> p{ 2,3,7,11,13,17,19 };
+	int num1;
+	cout << "Ievadi 1 pozitīvu skaitli zem 20" << endl;
+	cin >> num1;
+		int i = 0; bool a = false;
+	do {
+		if (num1 == p[i]) { cout << "true"; a = true; }
+		i++;
+	} while (i < p.size());
+	if (a == false)cout << "false";
+}
+void ss()
+{
+	vector <int> s{ 1,2,3,4,5,6 };
+	int i = 0, sum = 0;
+	do {
+		cout << s[i] * s[i] << "";
+		sum = sum + s[i] * s[i];
+		i++;
+	} while (i < s.size());
+	cout << sum;
+}
+void poz()
+{
+	vector<int> pozit{ 1,-2,3,-4,5 };
+	int i = 0;
+	do {
+		if (pozit[i] > 0) cout << pozit[i]<< " ";
+		i++;
+	} while (i < pozit.size());
+}
+void neg()
+{
+	vector<int> neg{ 1,-2,3,-4,5 };
+	int i = 0;
+	do {
+		if (neg[i] < 0) cout << neg[i] << " ";
+		i++;
+	} while (i < neg.size());
+}
+void vard()
+{
+	string var = "Hello";
+	int i = var.size();
+	do {
+		cout << var[i];
+		i--;
+	} while (i !=-1);
+}
+void vards()
+{
+	string var = "racecar";
+	if (var[0] == var[6] && var[1] == var[5] && var[2] == var[4]);
+	cout << "True";
+}
+vector<int> a(vector<int>k)
+{
+	return k;
+}
+int main()
+{
+	//cout<<sum()<<" "<<quadr();
+	   //average();
+	   //even();
+	   //prime();
+	   //ss();
+	//poz();
+	//neg();
+	//vard();
+	//vards();
+	//vector<int> k{ 1,2,3 };
+	//cout << a(k)[0] << a(k)[1] << a(k)[2];
+}
+
+
+#include <iostream> 
+#include <vector>
+using namespace std; 
+double diff()
+{
+	double num1, num2;
+	cout << "Ievadi 2 skaitlus" << endl;
+	cin >> num1 >> num2;
+	return num1-num2;
+}
+double quadr()
+{
+	double num1;
+	cout << "Ievadi 1 skaitli" << endl;
+	cin >> num1;
+	return num1 * num1*num1;
+}
+double divk()
+{
+	double num1;
+	cout << "Ievadi 1 skaitli" << endl;
+	cin >> num1;
+	return num1 * 2;
+}
+void uneven()
+{
+	vector<int> n{ 1,2,3,4,5,6,7,8 };
+	int i = 0;
+	do {
+		if (n[i] % 2 != 0)
+			cout << n[i] << " "<< endl;
+		i++;
+	} while (i < n.size());
+}
+void even()
+{
+	int num1;
+	cout << "Ievadi para skaitli" << endl;
+	cin >> num1;
+	if (num1 % 2 == 0)
+		{
+		cout << "True";
+	}
+	if (num1 % 2 != 0)
+	{
+		cout << "False";
+	}
+
+}
+void vards()
+{
+	string var = "Ammendment";
+	cout << var[0]<<var[1]<< var[2]<<var[3]<<var[4];
+	
+}
+void vard()
+{
+	string var = "Ammendment";
+	int i = var.size();
+	do {
+		cout << var[i];
+		i--;
+	} while (i != -1);
+}
+int main()
+{
+	//cout << diff() << endl;
+	//cout << quadr()<< endl;
+	//cout << divk() << endl;
+	//uneven();
+	//even();
+	//vards();
+	//vard();
+}
