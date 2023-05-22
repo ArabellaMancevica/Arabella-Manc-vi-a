@@ -1,0 +1,44 @@
+-- create
+
+CREATE TABLE EMPLOYEE (
+
+num INTEGER PRIMARY KEY,
+
+employee_id INTEGER NOT NULL,
+
+first_name TEXT NOT NULL,
+
+last_name TEXT NOT NULL,
+
+city TEXT NOT NULL,
+
+customer_id INTEGER NOT NULL,
+
+customer_name TEXT NOT NULL
+
+);
+
+-- insert
+
+INSERT INTO EMPLOYEE VALUES (1, 1, '        Thomas(Neo)', 'Anderson','London',1,'        Jewelry store');
+
+INSERT INTO EMPLOYEE VALUES (2, 1, '        Thomas(Neo)', 'Anderson','London',2,'        Bakery');
+
+INSERT INTO EMPLOYEE VALUES (3, 1, '        Thomas(Neo)', 'Anderson','London',3,'        Cafe');
+
+INSERT INTO EMPLOYEE VALUES (4, 1, '        Thomas(Neo)', 'Anderson','London',4,'        Restaurant');
+
+INSERT INTO EMPLOYEE VALUES (5, 2, '        Agent', '        Smith     ','Cardiff',1,'        Jewelry store');
+
+INSERT INTO EMPLOYEE VALUES (6, 2, '        Agent', '        Smith     ','Cardiff',2,'        Bakery');
+
+INSERT INTO EMPLOYEE VALUES (7, 2, '        Agent', '        Smith     ','Cardiff',3,'        Cafe');
+
+INSERT INTO EMPLOYEE VALUES (8, 2, '        Agent', '        Smith     ','Cardiff',4,'        Restaurant');
+
+
+-- SELECT *FROM EMPLOYEE;
+-- SELECT *FROM EMPLOYEE WHERE customer_name = '        Bakery';
+-- SELECT *FROM EMPLOYEE WHERE customer_id = 4 AND last_name = 'Anderson'
+-- SELECT AVG(customer_id) FROM EMPLOYEE
+-- SELECT *FROM EMPLOYEE WHERE city = 'London' AND first_name = 'Agent'
